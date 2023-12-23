@@ -12,7 +12,7 @@ function Main() {
         <section className='flex-1'>
             <ProductShoe/>
         </section>
-        <section className='flex-1 flex flex-col gap-4'>
+        <section className='flex-1 flex flex-col gap-4 max-md:mx-8'>
             <h2 className=" text-orange uppercase font-semibold">sneaker company</h2>
             <div className='black10 font-extrabold text-xl'>Fall Limited Edition Sneakers</div>
             <p className='text-blue5'>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer
