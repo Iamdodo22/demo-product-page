@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from 'react'
-import Navigation from './navigation'
+import React, { useContext, useEffect, useState, useRef } from 'react'
+import Navigation, {NavigationSm} from './navigation'
 import Cart from '../assets/images/icon-cart.svg'
 import avatar from '../assets/images/image-avatar.png'
 import logo from '../assets/images/logo.svg'
@@ -12,6 +12,7 @@ function Header() {
   const [,,,,,count,,add] = useContext(ctx)
   const [opened, setOpened] = useState(false)
   const [interval, setIntervals] = useState(true)
+  const navSm = useRef()
   
   useEffect( () => {
      const setTimer = setTimeout( () =>{
@@ -30,6 +31,10 @@ function Header() {
     setOpened(prev => !prev)
   }
 
+  const openMenu = ()=> {
+    navSm.current.classList.toggle('invisible');
+  }
+
   return (
     <>
     <div className='flex justify-between max-md:mx-8'>
@@ -37,10 +42,11 @@ function Header() {
           {(window.innerWidth < 769) && 
           <img 
             src={menubtn}
+            onClick={openMenu}
           />
           }
             <img src={logo} alt='logo'/>
-            {(window.innerWidth > 768) &&  <Navigation/>}
+            {(window.innerWidth < 769) ? <NavigationSm navSm={navSm}/> :  <Navigation/>}
         </div>
         <div className='flex items-center gap-4'>
               <div className='flex flex-col relative'>

@@ -17,7 +17,7 @@ const Modal = () => {
     useEffect(()=>{
        const mainImage = smallFrame[clicked].current.src
        bigFrame.current.src = mainImage;   
-      },[clicked,bigFrame]
+      },[clicked]
     )
 
     const closeModal = () =>{

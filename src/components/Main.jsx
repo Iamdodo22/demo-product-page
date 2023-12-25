@@ -17,7 +17,7 @@ function Main() {
             <div className='black10 font-extrabold text-xl'>Fall Limited Edition Sneakers</div>
             <p className='text-blue5'>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer
             </p>
-            <div className='flex flex-col'>
+            <div className='flex flex-col max-md:flex-row max-md:justify-between'>
                <span className='flex gap-2 items-center'>
                 <p className='text-black10 font-extrabold'>${fixedPrice}</p>
                 <p className='text-orange rounded-md text-sm bg-orangePale p-1'>50%</p>

@@ -20,11 +20,11 @@ const CartItem = () => {
    }
 
   return (
-    <div className='absolute top-20 rounded-md right-10 z-50 flex flex-col gap-4 shadow-lg bg-white pt-3 transition-all invisible'>
+    <div className='absolute top-20 rounded-md right-10 z-50 flex flex-col gap-4 shadow-lg bg-white pt-3 transition-all invisible max-md:top-24 max-md:w-[40rem]'>
       <h2 className='text-black10 mx-3 font-semibold'>Cart</h2>
       <hr />
       {(count <= 0)?
-       <span className='px-20 py-14'>Your cart is empty.</span>:
+       <span className='px-20 py-14 mx-auto text-nowrap'>Your cart is empty.</span>:
         <>
           <div className='flex gap-2 mx-3 items-center'> 
             <img
